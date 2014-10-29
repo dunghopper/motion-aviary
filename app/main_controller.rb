@@ -14,7 +14,7 @@ class MainViewController < UIViewController
   def editImage(sender)
     AFOpenGLManager.beginOpenGLLoad()
     AFPhotoEditorController.setAPIKey(ENV['AVIARY_KEY'], secret:ENV['AVIARY_SECRET'])
-    # AFPhotoEditorCustomization.setToolOrder(['kAFEffects','kAFFocus'])
+    AFPhotoEditorCustomization.setToolOrder(['kAFEffects','kAFFocus'])
     editor = AFPhotoEditorController.alloc.initWithImage(imageView.image)
     editor.delegate = self
     presentViewController(editor, animated:true, completion:nil)

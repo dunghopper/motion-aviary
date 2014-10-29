@@ -20,11 +20,6 @@ Motion::Project::App.setup do |app|
 
   app.info_plist['UIMainStoryboardFile'] = 'Main'
 
-
-  # app.identifier = config['app']['identifier']  
-  # app.testflight.api_token  = config['testflight']['api_token']
-  # app.testflight.team_token = config['testflight']['team_token']
-
   # app.pods do
   #   pod 'SVProgressHUD'
   # end
@@ -38,12 +33,7 @@ Motion::Project::App.setup do |app|
     OpenGLES QuartzCore StoreKit UIKit)
   app.libs += %w(/usr/lib/libsqlite3.0.dylib /usr/lib/libz.1.2.5.dylib)
 
-  # app.icons = ["Icon.png", "Icon-72.png", "Icon@2x.png"] 
-  # app.prerendered_icon = false
-
   app.device_family = [:ipad]
   app.interface_orientations = [:portrait]  
-
-  # app.sdk_version = "7.0" 
 
 end
